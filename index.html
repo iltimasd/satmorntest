@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+	.sidenav {
+    height: 100%;
+    width: 33vw;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #3366ff;
+    overflow-x: hidden;
+}
+
+#list img {
+	height: 16vh;
+	display:block;
+    margin:auto;
+    margin-top: 3vh;
+}
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+a{
+	text-align: center;
+	 margin: 0 auto;
+	     text-decoration: none;
+
+}
+
+
+#artists, #contact, #singles {
+
+}
+#artists::after{
+   display: block;
+    content: "\A artists";
+    color: white;
+	padding: 4px;
+	  font: 25px arial, sans-serif;
+;
+}
+#contact::after{
+   display: block;
+    content: "\A contact";
+    color: white;
+	padding: 4px;
+	  font: 25px arial, sans-serif;
+}
+#singles::after{
+   display: block;
+    content: "\A singles";
+    color: white;
+	padding: 4px;
+	  font: 25px arial, sans-serif;
+}
+.main{
+	height: 100%;
+	right: 0;
+	width:66vw;
+	position: fixed;
+	  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mainImg{
+	width: 100%;
+		display:block;
+    margin:auto;
+}
+</style>
+<body>
+<div class="sidenav">
+	<div id="list"><a href="#home"><img src="./homeNav.png"></a></div>
+	<div id="list"><a href="artists.html"  id="artists"><img  src="./artistsNav.png"></a></div>
+	<div id="list"><a href="#contact" id="contact"><img src="./contactNav.png"></a></div>
+
+	<div id="list"><a href="singles.html" id="singles"><img src="./singlesNav.png"></a></div>
+</div>
+<div class="main">
+	<img id="mainImg" src="main.png">
+</div>
+
+</body>
+</html>
