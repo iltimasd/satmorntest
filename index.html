@@ -2,18 +2,25 @@
 <html>
 <head>
 	<title></title>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/addons/p5.sound.min.js"></script>
+
 </head>
 <style type="text/css">
 	.sidenav {
     height: 100%;
-    width: 33vw;
+    width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: 0;
     background-color: #3366ff;
     overflow-x: hidden;
 }
+
+canvas { position:fixed; top:0; left:0; z-index:1; }
+
 
 #list img {
 	height: 16vh;
@@ -33,7 +40,9 @@ a{
 }
 
 
-#artists, #contact, #singles {
+#list:hover {
+    -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.3));
+    transform: translate(0px, -2px);
 
 }
 #artists::after{
@@ -74,16 +83,20 @@ a{
 }
 </style>
 <body>
-<div class="sidenav">
-	<div id="list"><a href="#home"><img src="./homeNav.png"></a></div>
+	    <script src="sketch.js"></script>
+<script type="text/javascript">
+		function letsPlay() {document.getElementById("sidenav").style.backgroundColor = "transparent";}
+
+</script>
+<div id="sidenav" class="sidenav">
+
+	<div onclick="letsPlay()" id="list"><a id="homes"  href="#home"><img src="./homeNav.png"></a></div>
 	<div id="list"><a href="artists.html"  id="artists"><img  src="./artistsNav.png"></a></div>
 	<div id="list"><a href="#contact" id="contact"><img src="./contactNav.png"></a></div>
 
 	<div id="list"><a href="singles.html" id="singles"><img src="./singlesNav.png"></a></div>
 </div>
-<div class="main">
-	<img id="mainImg" src="main.png">
-</div>
+
 
 </body>
 </html>
