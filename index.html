@@ -60,6 +60,9 @@ a{
 	padding: 4px;
 	  font: 25px arial, sans-serif;
 }
+#contact.email::after{
+	    content: "\A someone@yoursite.com";
+}
 #singles::after{
    display: block;
     content: "\A singles";
@@ -86,13 +89,15 @@ a{
 	    <script src="sketch.js"></script>
 <script type="text/javascript">
 		function letsPlay() {document.getElementById("sidenav").style.backgroundColor = "transparent";}
-
+		function email(elem){
+				elem.classList.add('email');
+		}
 </script>
 <div id="sidenav" class="sidenav">
 
 	<div onclick="letsPlay()" id="list"><a id="homes"  href="#home"><img src="./homeNav.png"></a></div>
 	<div id="list"><a href="artists.html"  id="artists"><img  src="./artistsNav.png"></a></div>
-	<div id="list"><a href="#contact" id="contact"><img src="./contactNav.png"></a></div>
+	<div id="list"><a href="mailto:someone@yoursite.com" id="contact" onclick="email(this)"><img src="./contactNav.png" ></a></div>
 
 	<div id="list"><a href="singles.html" id="singles"><img src="./singlesNav.png"></a></div>
 </div>
